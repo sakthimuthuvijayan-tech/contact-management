@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Management System - MVP</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        #contact-form, #contact-list-container { margin-bottom: 20px; padding: 15px; border: 1px solid #ccc; border-radius: 5px; }
+        .contact-item { border: 1px solid #eee; padding: 10px; margin-bottom: 5px; display: flex; justify-content: space-between; align-items: center; }
+        .contact-item button { margin-left: 10px; }
+        input { padding: 8px; margin: 5px; width: 200px; }
+    </style>
+</head>
+<body>
+    <h1>IBM-NJ Contact Management MVP</h1>
+
+    <div id="contact-form">
+        <h2>Add New Contact</h2>
+        <input type="hidden" id="contact-id">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="tel" id="phone" placeholder="Phone">
+        <button onclick="handleSubmit()">Save Contact</button>
+        <button id="cancel-btn" style="display: none;" onclick="resetForm()">Cancel Update</button>
+    </div>
+
+    <hr>
+
+    <div id="contact-list-container">
+        <h2>Contact List (CRUD via API)</h2>
+        <div id="contact-list">
+            Loading contacts...
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
